@@ -1,0 +1,27 @@
+import { Container } from '@/components/Container'
+import Image from 'next/image';
+import sectionAboutUs from '@/images/content/section-aboutus.png';
+
+export function SecondaryFeatures() {
+  return (
+    <section
+      id="secondary-features"
+      aria-label="Features for building a portfolio"
+      className="py-20 sm:py-32"
+    >
+      <Container>
+        <div className="mx-auto max-w-7xl sm:text-center">
+          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+            Built by working class, for all working class
+          </h2>
+          <p className="mt-2 text-lg text-gray-600">
+            We do the work of discovering and acquiring the land. Through Anavrin, the land will be divided into parts that is suitable for individual-sized land ownership. So you can afford to have your housing needs with your owns terms.
+          </p>
+        </div>
+        <div className="flex justify-center mt-20">
+          <Image src={sectionAboutUs} unoptimized />
+        </div>
+      </Container>
+    </section>
+  )
+}
