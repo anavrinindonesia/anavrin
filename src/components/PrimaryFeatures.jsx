@@ -22,6 +22,12 @@ import {
 import feature1 from '@/images/content/feature-1.png';
 import feature2 from '@/images/content/feature-2.png';
 import feature3 from '@/images/content/feature-3.png';
+import javaIcon from '@/images/logos/java.png';
+import sumateraIcon from '@/images/logos/sumatera.png';
+import kalimantanIcon from '@/images/logos/kalimantan.png';
+import baliIcon from '@/images/logos/bali.png';
+import ntbnttIcon from '@/images/logos/ntbntt.png';
+import papuaIcon from '@/images/logos/papua.png';
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
@@ -94,28 +100,70 @@ const bodyAnimation = {
 }
 
 function InviteScreen({ custom, animated = false }) {
+  const lands = [
+    {
+      image: javaIcon,
+      name: 'Java Island',
+      percentage: '+2,42'
+    },
+    {
+      image: sumateraIcon,
+      name: 'Sumatera',
+      percentage: '+2,42'
+    },
+    {
+      image: kalimantanIcon,
+      name: 'Kalimantan',
+      percentage: '+2,42'
+    },
+    {
+      image: baliIcon,
+      name: 'Bali',
+      percentage: '+2,42'
+    },
+    {
+      image: ntbnttIcon,
+      name: 'NTB. NTT',
+      percentage: '+2,42'
+    },
+    {
+      image: papuaIcon,
+      name: 'Papua',
+      percentage: '+2,42'
+    },
+  ]
+
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>Become a land owner</AppScreen.Title>
         <AppScreen.Subtitle>
-          <div className="relative mt-1 rounded-md shadow-sm">
-            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-              {/* <EnvelopeIcon className="h-5 w-5 text-gray-400" aria-hidden="true" /> */}
+          <div className="mt-3 h-10 bg-[#EEEEEE] rounded-lg flex space-x-4 items-center px-4">
+            <div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5 21.75C5.85 21.75 1.25 17.15 1.25 11.5C1.25 5.85 5.85 1.25 11.5 1.25C17.15 1.25 21.75 5.85 21.75 11.5C21.75 17.15 17.15 21.75 11.5 21.75ZM11.5 2.75C6.67 2.75 2.75 6.68 2.75 11.5C2.75 16.32 6.67 20.25 11.5 20.25C16.33 20.25 20.25 16.32 20.25 11.5C20.25 6.68 16.33 2.75 11.5 2.75Z" fill="black" />
+                <path d="M21.9999 22.7499C21.8099 22.7499 21.6199 22.6799 21.4699 22.5299L19.4699 20.5299C19.1799 20.2399 19.1799 19.7599 19.4699 19.4699C19.7599 19.1799 20.2399 19.1799 20.5299 19.4699L22.5299 21.4699C22.8199 21.7599 22.8199 22.2399 22.5299 22.5299C22.3799 22.6799 22.1899 22.7499 21.9999 22.7499Z" fill="black" />
+              </svg>
             </div>
-            <input
-              type="search"
-              name="search"
-              id="search"
-              className="block w-full rounded-md border-gray-300 pl-10 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              placeholder="Search Square meters"
-            />
+            <div className="text-[#AFAFAF] text-sm">
+              Search Square meters
+            </div>
           </div>
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
         <div className="px-4 py-6">
-
+          <div className="flex justify-between items-baseline">
+            <span className="text-[#545454] text-base font-medium">Sector</span>
+            <span className="text-[#1E54B7] text-xs">View All</span>
+          </div>
+          <div className="grid grid-cols-3 gap-4 text-center mt-5">
+            {lands.map((land) => <div className="border border-[#AFAFAF] rounded-lg px-2 py-4">
+              <Image src={land.image} />
+              <h3 className="text-xs">{land.name}</h3>
+              <p className="text-[8px] text-[#3B939A]">{land.percentage}</p>
+            </div>)}
+          </div>
         </div>
       </MotionAppScreenBody>
     </AppScreen>
@@ -233,31 +281,54 @@ function InvestScreen({ custom, animated = false }) {
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
         <div className="px-4 py-6">
+          <div className="flex justify-between mb-10">
+            <div className="flex flex-col">
+              <span className="text-2xl">TMA</span>
+              <span className="text-[#AFAFAF] text-xs">Tangerang Metropolitan Area</span>
+            </div>
+            <div className="flex flex-col text-right">
+              <span className="text-xl font-medium">Rp710.000</span>
+              <span className="text-xs text-[#3B939A] mt-1">+25.000 +(4,2%)</span>
+            </div>
+          </div>
+          <div className="space-y-4 pb-8 mb-8 border-b border-[#E2E2E2]">
+            <div className="flex justify-between items-center">
+              <span className="text-[#AFAFAF] text-sm">Amount</span>
+              <div className="rounded py-2.5 px-4 border border-[#EEEEEE] w-4/6 text-sm font-medium flex justify-between"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 12.75H8C7.59 12.75 7.25 12.41 7.25 12C7.25 11.59 7.59 11.25 8 11.25H16C16.41 11.25 16.75 11.59 16.75 12C16.75 12.41 16.41 12.75 16 12.75Z" fill="#AFAFAF" />
+                <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z" fill="#AFAFAF" />
+              </svg>
+                <span>3.550.000</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 12.75H8C7.59 12.75 7.25 12.41 7.25 12C7.25 11.59 7.59 11.25 8 11.25H16C16.41 11.25 16.75 11.59 16.75 12C16.75 12.41 16.41 12.75 16 12.75Z" fill="#AFAFAF" />
+                  <path d="M12 16.75C11.59 16.75 11.25 16.41 11.25 16V8C11.25 7.59 11.59 7.25 12 7.25C12.41 7.25 12.75 7.59 12.75 8V16C12.75 16.41 12.41 16.75 12 16.75Z" fill="#AFAFAF" />
+                  <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z" fill="#AFAFAF" />
+                </svg>
+              </div>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-[#AFAFAF] text-sm">Expiry</span>
+              <div className="rounded py-2.5 px-4 border border-[#EEEEEE] w-4/6 text-sm font-medium flex justify-between items-center"><span>Good for day</span> <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.99953 8.79989C8.29953 8.79989 7.59953 8.52989 7.06953 7.99989L0.549531 1.47989C0.259531 1.18989 0.259531 0.709893 0.549531 0.419893C0.839531 0.129893 1.31953 0.129893 1.60953 0.419893L8.12953 6.93989C8.60953 7.41989 9.38953 7.41989 9.86953 6.93989L16.3895 0.419893C16.6795 0.129893 17.1595 0.129893 17.4495 0.419893C17.7395 0.709893 17.7395 1.18989 17.4495 1.47989L10.9295 7.99989C10.3995 8.52989 9.69953 8.79989 8.99953 8.79989Z" fill="#AFAFAF" />
+              </svg>
+              </div>
+            </div>
+          </div>
           <div className="space-y-4">
             {[
-              { label: 'Number of shares', value: '100' },
+              { label: 'Sq meter', value: '5' },
               {
-                label: 'Current market price',
+                label: 'My Balance',
                 value: (
                   <div className="flex">
-                    $34.28
-                    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
-                      <path
-                        d="M17 15V7H9M17 7 7 17"
-                        stroke="#06B6D4"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    51.178.500
                   </div>
                 ),
               },
-              { label: 'Estimated cost', value: '$3,428.00' },
+              { label: 'Investment (inc fee)', value: '3.561.000' },
             ].map((item) => (
               <div
                 key={item.label}
-                className="flex justify-between border-b border-gray-100 pb-4"
+                className="flex justify-between"
               >
                 <div className="text-sm text-gray-500">{item.label}</div>
                 <div className="text-sm font-semibold text-gray-900">
@@ -265,9 +336,9 @@ function InvestScreen({ custom, animated = false }) {
                 </div>
               </div>
             ))}
-            <div className="rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
-              Buy shares
-            </div>
+          </div>
+          <div className="rounded-lg bg-black mt-8 py-2 px-3 text-center text-sm font-semibold text-white">
+            Buy
           </div>
         </div>
       </MotionAppScreenBody>
@@ -414,7 +485,7 @@ function FeaturesMobile() {
           <div
             key={featureIndex}
             ref={(ref) => (slideRefs.current[featureIndex] = ref)}
-            className="w-full flex-none snap-center px-4 sm:px-6"
+            className="w-full flex-none snap-center px-8 sm:px-6"
           >
             <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 px-5 py-6">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -427,8 +498,7 @@ function FeaturesMobile() {
                 <feature.screen />
               </PhoneFrame>
               <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
-                <Image src={feature.icon} unoptimized />
-                <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
+                <h3 className="text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
                 <p className="mt-2 text-sm text-gray-400">
@@ -473,20 +543,9 @@ export function PrimaryFeatures() {
     >
       <Container>
         <div className="mx-auto max-w-2xl">
-          <motion.div initial={{ opacity: 0, y: -100 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                type: "spring",
-                bounce: 0.4,
-                duration: 2
-              }
-            }}>
-            <h2 className="text-3xl text-center font-medium tracking-tight text-white">
-              Find your ideal piece of land that suits your needs and purchasing ability
-            </h2>
-          </motion.div>
+          <h2 className="text-3xl text-center font-medium tracking-tight text-white">
+            Find your ideal piece of land that suits your needs and purchasing ability
+          </h2>
         </div>
       </Container>
       <div className="mt-16 md:hidden">

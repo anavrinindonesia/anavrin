@@ -23,6 +23,10 @@
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 table {
   display: block;
   max-width: -moz-fit-content;

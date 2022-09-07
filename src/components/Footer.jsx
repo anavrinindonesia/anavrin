@@ -9,14 +9,14 @@ export function Footer() {
   return (
     <footer className="border-t border-gray-200">
       <Container>
-        <div className="flex flex-col items-center border-t border-gray-200 py-8 md:flex-row-reverse md:justify-between md:py-6">
+        <div className="flex flex-col items-center py-8 md:flex-row-reverse md:justify-between md:py-6">
           <div className="flex w-full justify-center items-center md:w-auto space-x-4 mb-4 lg:mb-0">
-            <a href="https://www.instagram.com/anavrindonesia/" target="_blank" rel="noreferrer">
+            {/* <a href="https://www.instagram.com/anavrindonesia/" target="_blank" rel="noreferrer">
               <Image src={facebookLogo} />
             </a>
             <a href="https://www.instagram.com/anavrindonesia/" target="_blank" rel="noreferrer">
               <Image src={instagramLogo} />
-            </a>
+            </a> */}
             <a href="https://www.linkedin.com/company/anavrindonesia/" target="_blank" rel="noreferrer">
               <Image src={linkedinLogo} />
             </a>

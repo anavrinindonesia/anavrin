@@ -250,72 +250,49 @@ export function Pricing() {
     >
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <motion.div initial={{ opacity: 0, y: -100 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                type: "spring",
-                bounce: 0.4,
-                duration: 2
-              }
-            }}>
-            <h2
-              id="pricing-title"
-              className="text-3xl font-medium tracking-tight text-gray-900"
-            >
-              Introducing a new way to land ownership
-            </h2>
-          </motion.div>
-
+          <h2
+            id="pricing-title"
+            className="text-3xl font-medium tracking-tight text-gray-900"
+          >
+            Introducing a new way to land ownership
+          </h2>
         </div>
 
-        <motion.div initial={{ opacity: 0, y: -100 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              type: "spring",
-              bounce: 0.4,
-              duration: 1.8
-            }
-          }}>
-          <div className="mt-8 flex justify-center">
-            <table className="divide-y divide-gray-300">
-              <thead>
-                <tr>
-                  <th
-                    scope="col"
-                    className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 md:pl-0"
-                  >
-                  </th>
-                  <th scope="col" className="py-3.5 px-3 text-center text-sm font-semibold text-gray-900">
-                    Buy it yourself
-                  </th>
-                  <th scope="col" className="py-3.5 px-3 text-center text-sm font-semibold text-gray-900">
-                    Through Developers
-                  </th>
-                  <th scope="col" className="py-3.5 px-3 text-center text-sm font-semibold text-gray-900">
-                    Anavrin
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="overflow-x-auto">
-                {comparisons.map((comparison) => (
-                  <tr key={comparison.description}>
-                    <td className="whitespace-nowrap py-4 px-3 text-sm text-gray-500 font-bold">{comparison.description}</td>
-                    <td valign="middle" align="center" className="whitespace-nowrap py-4 pl-4 text-sm text-gray-500">
-                      {comparison.yourself ? <TickCircle /> : <CloseCircle />}
-                    </td>
-                    <td valign="middle" align="center" className="whitespace-nowrap py-4 px-3 text-sm text-gray-500">{comparison.developers ? <TickCircle /> : <CloseCircle />}</td>
-                    <td className="whitespace-nowrap py-4 px-3 text-sm text-gray-500 bg-[#BBE0E3]/20 flex items-center space-x-2"><TickCircle color="#3B939A" /><span>{comparison.anavrin}</span></td>
+        <div className="mt-8 flex justify-center">
+          <table className="divide-y divide-gray-300">
+            <thead>
+              <tr>
+                <th
+                  scope="col"
+                  className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 md:pl-0"
+                >
+                </th>
+                <th scope="col" className="py-3.5 px-3 text-center text-sm font-semibold text-gray-900">
+                  Buy it yourself
+                </th>
+                <th scope="col" className="py-3.5 px-3 text-center text-sm font-semibold text-gray-900">
+                  Through Developers
+                </th>
+                <th scope="col" className="py-3.5 px-3 text-center text-sm font-semibold text-gray-900">
+                  Anavrin
+                </th>
+              </tr>
+            </thead>
+            <tbody className="overflow-x-auto">
+              {comparisons.map((comparison) => (
+                <tr key={comparison.description}>
+                  <td className="whitespace-nowrap py-4 px-3 text-sm text-gray-500 font-bold">{comparison.description}</td>
+                  <td valign="middle" align="center" className="whitespace-nowrap py-4 pl-4 text-sm text-gray-500">
+                    {comparison.yourself ? <TickCircle /> : <CloseCircle />}
+                  </td>
+                  <td valign="middle" align="center" className="whitespace-nowrap py-4 px-3 text-sm text-gray-500">{comparison.developers ? <TickCircle /> : <CloseCircle />}</td>
+                  <td className="whitespace-nowrap py-4 px-3 text-sm text-gray-500 bg-[#BBE0E3]/20 flex items-center space-x-2"><TickCircle color="#3B939A" /><span>{comparison.anavrin}</span></td>
 
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </motion.div>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </Container>
     </section>
   )

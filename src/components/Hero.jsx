@@ -314,7 +314,7 @@ function AppDemo() {
 
 export function Hero() {
   return (
-    <div className="overflow-hidden pt-10 sm:py-32">
+    <div className="overflow-hidden pt-10 sm:py-32 h-[70vh]">
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-24 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6 flex flex-col items-center lg:items-start">
@@ -325,7 +325,8 @@ export function Hero() {
                 transition: {
                   type: "spring",
                   bounce: 0.4,
-                  duration: 1.2
+                  duration: 1.2,
+                  delay: 0.3
                 }
               }}>
               <h1 className="text-4xl font-medium tracking-tight text-gray-900 text-center lg:text-left">
@@ -339,7 +340,8 @@ export function Hero() {
                 transition: {
                   type: "spring",
                   bounce: 0.4,
-                  duration: 0.8
+                  duration: 0.8,
+                  delay: 0.3
                 }
               }}>
               <p className="mt-6 text-lg text-gray-600">
@@ -353,7 +355,8 @@ export function Hero() {
                 transition: {
                   type: "spring",
                   bounce: 0.4,
-                  duration: 0.6
+                  duration: 0.6,
+                  delay: 0.3
                 }
               }}>
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
@@ -373,7 +376,8 @@ export function Hero() {
                 opacity: 1,
                 transition: {
                   type: "spring",
-                  duration: 1.2
+                  duration: 1.2,
+                  delay: 0.3
                 }
               }}>
               <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
