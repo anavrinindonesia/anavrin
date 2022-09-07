@@ -270,17 +270,17 @@ export function Pricing() {
 
         </div>
 
-        <div className="mt-8 flex justify-center">
-          <motion.div initial={{ opacity: 0, y: -50 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                type: "spring",
-                bounce: 0.4,
-                duration: 1.2
-              }
-            }}>
+        <motion.div initial={{ opacity: 0, y: -100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: "spring",
+              bounce: 0.4,
+              duration: 1.8
+            }
+          }}>
+          <div className="mt-8 flex justify-center">
             <table className="divide-y divide-gray-300">
               <thead>
                 <tr>
@@ -314,9 +314,8 @@ export function Pricing() {
                 ))}
               </tbody>
             </table>
-          </motion.div>
-
-        </div>
+          </div>
+        </motion.div>
       </Container>
     </section>
   )
