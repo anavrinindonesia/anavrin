@@ -467,15 +467,26 @@ function FeaturesMobile() {
 export function PrimaryFeatures() {
   return (
     <section
-      id="features"
+      id="solution"
       aria-label="Features for investing all your money"
       className="bg-gray-900 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-center font-medium tracking-tight text-white">
-            Find your ideal piece of land that suits your needs and purchasing ability
-          </h2>
+          <motion.div initial={{ opacity: 0, y: -100 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 2
+              }
+            }}>
+            <h2 className="text-3xl text-center font-medium tracking-tight text-white">
+              Find your ideal piece of land that suits your needs and purchasing ability
+            </h2>
+          </motion.div>
         </div>
       </Container>
       <div className="mt-16 md:hidden">

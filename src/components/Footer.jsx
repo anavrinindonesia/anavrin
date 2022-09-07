@@ -17,7 +17,7 @@ export function Footer() {
             <a href="https://www.instagram.com/anavrindonesia/" target="_blank" rel="noreferrer">
               <Image src={instagramLogo} />
             </a>
-            <a href="https://www.instagram.com/anavrindonesia/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/company/anavrindonesia/" target="_blank" rel="noreferrer">
               <Image src={linkedinLogo} />
             </a>
           </div>

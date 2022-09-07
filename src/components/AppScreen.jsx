@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import Image from 'next/image';
 import logo from '@/images/logos/logo.svg';
 
+
 function Logo(props) {
   return (
     <div className="relative">
@@ -59,6 +60,7 @@ AppScreen.Header = forwardRef(function AppScreenHeader({ children }, ref) {
     <div ref={ref} className="mt-6 px-4 text-white">
       {children}
     </div>
+
   )
 })
 
