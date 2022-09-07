@@ -9,6 +9,8 @@ const nextConfig = {
       unoptimized: true,
     },
   },
+  basePath: "/anavrin",
+  assetPrefix: "/anavrin",
 }
 
 module.exports = nextConfig
