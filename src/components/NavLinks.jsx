@@ -11,10 +11,9 @@ export function NavLinks() {
     ['About Us', '#about-us'],
     ['Learn', '#learn'],
   ].map(([label, href], index) => (
-    <motion.div initial={{ opacity: 0, scale: 0.5 }}
+    <motion.div key={label} initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1, transition: { delay: 0.3 } }} >
       <Link
-        key={label}
         href={href}
         className="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
         onMouseEnter={() => setHoveredIndex(index)}

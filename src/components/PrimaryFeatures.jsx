@@ -158,7 +158,7 @@ function InviteScreen({ custom, animated = false }) {
             <span className="text-[#1E54B7] text-xs">View All</span>
           </div>
           <div className="grid grid-cols-3 gap-4 text-center mt-5">
-            {lands.map((land) => <div className="border border-[#AFAFAF] rounded-lg px-2 py-4">
+            {lands.map((land, index) => <div key={index} className="border border-[#AFAFAF] rounded-lg px-2 py-4">
               <Image src={land.image} />
               <h3 className="text-xs">{land.name}</h3>
               <p className="text-[8px] text-[#3B939A]">{land.percentage}</p>
