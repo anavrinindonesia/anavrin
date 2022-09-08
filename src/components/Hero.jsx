@@ -325,10 +325,9 @@ export function Hero() {
                 transition: {
                   type: "spring",
                   bounce: 0.4,
-                  duration: 1.2,
-                  delay: 0.3
+                  duration: 1.2
                 }
-              }}>
+              }} viewport={{ once: true }}>
               <h1 className="text-4xl font-medium tracking-tight text-gray-900 text-center lg:text-left">
                 Land ownership made <span className="text-[#4EABB3]">easy</span>
               </h1>
@@ -340,10 +339,9 @@ export function Hero() {
                 transition: {
                   type: "spring",
                   bounce: 0.4,
-                  duration: 0.8,
-                  delay: 0.3
+                  duration: 0.8
                 }
-              }}>
+              }} viewport={{ once: true }}>
               <p className="mt-6 text-lg text-gray-600">
                 Transparent, Affordable, Lucrative
               </p>
@@ -355,10 +353,9 @@ export function Hero() {
                 transition: {
                   type: "spring",
                   bounce: 0.4,
-                  duration: 0.6,
-                  delay: 0.3
+                  duration: 0.6
                 }
-              }}>
+              }} viewport={{ once: true }}>
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
                 <Button
                   href="#get-started"
@@ -379,7 +376,7 @@ export function Hero() {
                   duration: 1.2,
                   delay: 0.3
                 }
-              }}>
+              }} viewport={{ once: true }}>
               <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
               <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
                 <Image src={sectionLanding} />
