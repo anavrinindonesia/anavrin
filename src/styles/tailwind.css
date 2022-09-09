@@ -35,3 +35,9 @@ table {
   overflow-x: auto;
   white-space: nowrap;
 }
+
+@media (max-width: 640px) {
+  .mobile-container {
+    zoom: 0.7;
+  }
+}

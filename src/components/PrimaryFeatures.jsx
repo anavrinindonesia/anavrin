@@ -29,21 +29,21 @@ const features = [
     description:
       'Discover your desired land, flip it, and accumulate wealth',
     icon: feature1,
-    screen: InviteScreen,
+    screen: SmartInvestmentScreen,
   },
   {
     name: 'Convertible Ownership',
     description:
       'Convert digital shares into physical land ownership',
     icon: feature2,
-    screen: StocksScreen,
+    screen: ConvertibleOwnershipScreen,
   },
   {
     name: 'Buy-Back Guarantee',
     description:
       'Repurchase of the land is exercisable under 60 days',
     icon: feature3,
-    screen: InvestScreen,
+    screen: BuyBackScreen,
   },
 ]
 
@@ -90,7 +90,7 @@ const bodyAnimation = {
   },
 }
 
-function InviteScreen({ custom, animated = false }) {
+function SmartInvestmentScreen({ custom, animated = false }) {
   const lands = [
     {
       image: javaIcon,
@@ -125,7 +125,7 @@ function InviteScreen({ custom, animated = false }) {
   ]
 
   return (
-    <AppScreen className="w-full">
+    <AppScreen className="w-full mobile-container">
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>Become a land owner</AppScreen.Title>
         <AppScreen.Subtitle>
@@ -161,9 +161,9 @@ function InviteScreen({ custom, animated = false }) {
   )
 }
 
-function StocksScreen({ custom, animated = false }) {
+function ConvertibleOwnershipScreen({ custom, animated = false }) {
   return (
-    <AppScreen className="w-full">
+    <AppScreen className="w-full mobile-container">
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>TMA</AppScreen.Title>
         <AppScreen.Subtitle>Tangerang Metropolitan Area</AppScreen.Subtitle>
@@ -181,9 +181,9 @@ function StocksScreen({ custom, animated = false }) {
   )
 }
 
-function InvestScreen({ custom, animated = false }) {
+function BuyBackScreen({ custom, animated = false }) {
   return (
-    <AppScreen className="w-full">
+    <AppScreen className="w-full mobile-container">
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>Buy Sq meter</AppScreen.Title>
         <AppScreen.Subtitle>
