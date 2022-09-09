@@ -206,7 +206,7 @@ function EmpoweredScreen({ custom, animated = false }) {
                 className="flex justify-between"
               >
                 <div className="text-sm font-semibold text-gray-900 flex gap-x-2"><item.icon />{item.label}</div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-gray-500 text-right">
                   {item.value}
                 </div>
               </div>
@@ -227,7 +227,7 @@ function EmpoweredScreen({ custom, animated = false }) {
                 className="flex justify-between"
               >
                 <div className="text-sm font-semibold text-gray-900 flex gap-x-2"><item.icon />{item.label}</div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-gray-500 text-right">
                   {item.value}
                 </div>
               </div>
@@ -380,7 +380,7 @@ function FeaturesMobile() {
             ref={(ref) => (slideRefs.current[featureIndex] = ref)}
             className="w-full flex-none snap-center px-8 sm:px-6"
           >
-            <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 px-5 py-6">
+            <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 py-6">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                 <CircleBackground
                   color="#13B5C8"
