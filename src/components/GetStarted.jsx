@@ -8,7 +8,7 @@ export function GetStarted() {
     <section
       id="get-started"
       aria-label="Become a land owner"
-      className="pb-32 lg:pt-40 lg:pb-52"
+      className="pb-32 pt-40 lg:pt-32 lg:pb-52"
     >
       <Container>
         <div className="mx-auto max-w-7xl grid grid-cols-2 items-center gap-20">
