@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import clsx from 'clsx'
 import Image from 'next/image';
-import logo from '@/images/logos/logo.svg';
+import logo from '@/images/logos/logo.png';
 
 
 function Logo(props) {
