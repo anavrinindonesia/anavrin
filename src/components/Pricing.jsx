@@ -232,13 +232,13 @@ export function Pricing() {
       description: 'Mortgage Ready',
       yourself: false,
       developers: true,
-      anavrin: 'We guarantee all of our property is mortgage ready'
+      anavrin: 'We guarantee all of our property is mortgage ready*'
     },
     {
       description: 'Standardized Development Quality',
       yourself: false,
       developers: true,
-      anavrin: 'Development Quality will be standardize across property'
+      anavrin: 'Development Quality will be standardize across property*'
     },
   ]
 
@@ -259,7 +259,7 @@ export function Pricing() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <table className="divide-y divide-gray-300">
+          <table className="divide-y divide-gray-300 w-full">
             <thead>
               <tr>
                 <th
@@ -292,6 +292,14 @@ export function Pricing() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        <div className="text-right mt-4">
+          <h2
+            className="text-xs tracking-tight text-gray-400 italic"
+          >
+            * In the next product iteration
+          </h2>
         </div>
       </Container>
     </section>

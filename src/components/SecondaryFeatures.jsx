@@ -17,7 +17,7 @@ export function SecondaryFeatures() {
             Built by working class, for all working class
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            We do the work of discovering and acquiring the land. Through Anavrin, the land will be divided into parts that is suitable for individual-sized land ownership. So you can afford to have your housing needs with your owns terms.
+            We do the work of discovering and acquiring the land, and through our platform, we split it into parts that are suitable for individual-sized land ownership so you can afford to have your housing needs on your terms.
           </p>
         </div>
         <div className="flex justify-center mt-20">

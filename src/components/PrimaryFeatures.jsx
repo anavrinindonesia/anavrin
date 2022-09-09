@@ -19,6 +19,7 @@ import baliIcon from '@/images/logos/bali.png';
 import ntbnttIcon from '@/images/logos/ntbntt.png';
 import papuaIcon from '@/images/logos/papua.png';
 import convertibleOwnership from '@/images/content/convertible-ownership.png';
+import { Buildings, RulerPen, Discover, Flag, Bubble, Flash, Electricity, HomeWifi, Trash, Car } from './StockLogos'
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
@@ -39,11 +40,11 @@ const features = [
     screen: ConvertibleOwnershipScreen,
   },
   {
-    name: 'Buy-Back Guarantee',
+    name: 'Empowered with AI',
     description:
-      'Repurchase of the land is exercisable under 60 days',
+      'Predict best appreciating locations on the go, for better benefits',
     icon: feature3,
-    screen: BuyBackScreen,
+    screen: EmpoweredScreen,
   },
 ]
 
@@ -181,75 +182,56 @@ function ConvertibleOwnershipScreen({ custom, animated = false }) {
   )
 }
 
-function BuyBackScreen({ custom, animated = false }) {
+function EmpoweredScreen({ custom, animated = false }) {
   return (
     <AppScreen className="w-full mobile-container">
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy Sq meter</AppScreen.Title>
+        <AppScreen.Title>Overview</AppScreen.Title>
         <AppScreen.Subtitle>
 
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
         <div className="px-4 py-6">
-          <div className="flex justify-between mb-10">
-            <div className="flex flex-col">
-              <span className="text-2xl">TMA</span>
-              <span className="text-[#AFAFAF] text-xs">Tangerang Metropolitan Area</span>
-            </div>
-            <div className="flex flex-col text-right">
-              <span className="text-xl font-medium">Rp710.000</span>
-              <span className="text-xs text-[#3B939A] mt-1">+25.000 +(4,2%)</span>
-            </div>
-          </div>
-          <div className="space-y-4 pb-8 mb-8 border-b border-[#E2E2E2]">
-            <div className="flex justify-between items-center">
-              <span className="text-[#AFAFAF] text-sm">Amount</span>
-              <div className="rounded py-2.5 px-4 border border-[#EEEEEE] w-4/6 text-sm font-medium flex justify-between"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 12.75H8C7.59 12.75 7.25 12.41 7.25 12C7.25 11.59 7.59 11.25 8 11.25H16C16.41 11.25 16.75 11.59 16.75 12C16.75 12.41 16.41 12.75 16 12.75Z" fill="#AFAFAF" />
-                <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z" fill="#AFAFAF" />
-              </svg>
-                <span>3.550.000</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 12.75H8C7.59 12.75 7.25 12.41 7.25 12C7.25 11.59 7.59 11.25 8 11.25H16C16.41 11.25 16.75 11.59 16.75 12C16.75 12.41 16.41 12.75 16 12.75Z" fill="#AFAFAF" />
-                  <path d="M12 16.75C11.59 16.75 11.25 16.41 11.25 16V8C11.25 7.59 11.59 7.25 12 7.25C12.41 7.25 12.75 7.59 12.75 8V16C12.75 16.41 12.41 16.75 12 16.75Z" fill="#AFAFAF" />
-                  <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z" fill="#AFAFAF" />
-                </svg>
-              </div>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-[#AFAFAF] text-sm">Expiry</span>
-              <div className="rounded py-2.5 px-4 border border-[#EEEEEE] w-4/6 text-sm font-medium flex justify-between items-center"><span>Good for day</span> <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.99953 8.79989C8.29953 8.79989 7.59953 8.52989 7.06953 7.99989L0.549531 1.47989C0.259531 1.18989 0.259531 0.709893 0.549531 0.419893C0.839531 0.129893 1.31953 0.129893 1.60953 0.419893L8.12953 6.93989C8.60953 7.41989 9.38953 7.41989 9.86953 6.93989L16.3895 0.419893C16.6795 0.129893 17.1595 0.129893 17.4495 0.419893C17.7395 0.709893 17.7395 1.18989 17.4495 1.47989L10.9295 7.99989C10.3995 8.52989 9.69953 8.79989 8.99953 8.79989Z" fill="#AFAFAF" />
-              </svg>
-              </div>
-            </div>
-          </div>
+          <div className="font-semibold mb-6">About TMA</div>
           <div className="space-y-4">
             {[
-              { label: 'Sq meter', value: '5' },
-              {
-                label: 'My Balance',
-                value: (
-                  <div className="flex">
-                    51.178.500
-                  </div>
-                ),
-              },
-              { label: 'Investment (inc fee)', value: '3.561.000' },
+              { icon: Buildings, label: 'Developer', value: 'Panah Cinta Property' },
+              { icon: RulerPen, label: 'Land Size', value: '1000/2000 Sq m' },
+              { icon: Discover, label: 'Place', value: 'Tangerang Selatan' },
+              { icon: Flag, label: 'Bought in', value: 'Jan 2022' },
             ].map((item) => (
               <div
                 key={item.label}
                 className="flex justify-between"
               >
-                <div className="text-sm text-gray-500">{item.label}</div>
-                <div className="text-sm font-semibold text-gray-900">
+                <div className="text-sm font-semibold text-gray-900 flex gap-x-2"><item.icon />{item.label}</div>
+                <div className="text-sm text-gray-500">
                   {item.value}
                 </div>
               </div>
             ))}
           </div>
-          <div className="rounded-lg bg-black mt-8 py-2 px-3 text-center text-sm font-semibold text-white">
-            Buy
+          <div className="font-semibold mb-6 mt-6">Facts</div>
+          <div className="space-y-4">
+            {[
+              { icon: Bubble, label: 'Water Coverage', value: '2' },
+              { icon: Flash, label: 'Electricity', value: 'PLN Indonesia' },
+              { icon: Electricity, label: 'Electric network', value: 'Underground' },
+              { icon: HomeWifi, label: 'Internet Fiber', value: '3' },
+              { icon: Trash, label: 'Utility Sewer', value: 'Attached' },
+              { icon: Car, label: 'Parking Type', value: 'Attached Garage' },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="flex justify-between"
+              >
+                <div className="text-sm font-semibold text-gray-900 flex gap-x-2"><item.icon />{item.label}</div>
+                <div className="text-sm text-gray-500">
+                  {item.value}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </MotionAppScreenBody>
