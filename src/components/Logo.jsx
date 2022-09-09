@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from '@/images/logos/logo.svg';
+import logo from '@/images/logos/logo.png';
 
 export function Logomark(props) {
   return (

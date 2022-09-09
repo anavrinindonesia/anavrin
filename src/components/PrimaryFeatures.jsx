@@ -408,11 +408,11 @@ function FeaturesMobile() {
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
                 <feature.screen />
               </PhoneFrame>
-              <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
+              <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 px-6 py-4 backdrop-blur sm:p-10 text-center">
                 <h3 className="text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray-400">
+                <p className="text-sm text-gray-400">
                   {feature.description}
                 </p>
               </div>
