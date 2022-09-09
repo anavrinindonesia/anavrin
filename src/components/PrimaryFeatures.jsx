@@ -9,16 +9,6 @@ import { AppScreen } from '@/components/AppScreen'
 import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
-import {
-  DiageoLogo,
-  LaravelLogo,
-  MirageLogo,
-  ReversableLogo,
-  StatamicLogo,
-  StaticKitLogo,
-  TransistorLogo,
-  TupleLogo,
-} from '@/components/StockLogos'
 import feature1 from '@/images/content/feature-1.png';
 import feature2 from '@/images/content/feature-2.png';
 import feature3 from '@/images/content/feature-3.png';
@@ -28,6 +18,7 @@ import kalimantanIcon from '@/images/logos/kalimantan.png';
 import baliIcon from '@/images/logos/bali.png';
 import ntbnttIcon from '@/images/logos/ntbntt.png';
 import papuaIcon from '@/images/logos/papua.png';
+import convertibleOwnership from '@/images/content/convertible-ownership.png';
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
@@ -178,92 +169,12 @@ function StocksScreen({ custom, animated = false }) {
         <AppScreen.Subtitle>Tangerang Metropolitan Area</AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="divide-y divide-gray-100">
-          {[
-            {
-              name: 'Laravel',
-              price: '4,098.01',
-              change: '+4.98%',
-              color: '#F9322C',
-              logo: LaravelLogo,
-            },
-            {
-              name: 'Tuple',
-              price: '5,451.10',
-              change: '-3.38%',
-              color: '#5A67D8',
-              logo: TupleLogo,
-            },
-            {
-              name: 'Transistor',
-              price: '4,098.41',
-              change: '+6.25%',
-              color: '#2A5B94',
-              logo: TransistorLogo,
-            },
-            {
-              name: 'Diageo',
-              price: '250.65',
-              change: '+1.25%',
-              color: '#3320A7',
-              logo: DiageoLogo,
-            },
-            {
-              name: 'StaticKit',
-              price: '250.65',
-              change: '-3.38%',
-              color: '#2A3034',
-              logo: StaticKitLogo,
-            },
-            {
-              name: 'Statamic',
-              price: '5,040.85',
-              change: '-3.11%',
-              color: '#0EA5E9',
-              logo: StatamicLogo,
-            },
-            {
-              name: 'Mirage',
-              price: '140.44',
-              change: '+9.09%',
-              color: '#16A34A',
-              logo: MirageLogo,
-            },
-            {
-              name: 'Reversable',
-              price: '550.60',
-              change: '-1.25%',
-              color: '#8D8D8D',
-              logo: ReversableLogo,
-            },
-          ].map((stock) => (
-            <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
-              <div
-                className="flex-none rounded-full"
-                style={{ backgroundColor: stock.color }}
-              >
-                <stock.logo className="h-10 w-10" />
-              </div>
-              <div className="flex-auto text-sm text-gray-900">
-                {stock.name}
-              </div>
-              <div className="flex-none text-right">
-                <div className="text-sm font-medium text-gray-900">
-                  {stock.price}
-                </div>
-                <div
-                  className={clsx(
-                    'text-xs leading-5',
-                    stock.change.startsWith('+')
-                      ? 'text-cyan-500'
-                      : 'text-gray-500'
-                  )}
-                >
-                  {stock.change}
-                </div>
-              </div>
-            </div>
-          ))}
+        <div>
+          <Image src={convertibleOwnership} />
+        </div>
+        <div className="flex space-x-2 px-5 mt-5">
+          <div className="h-9 flex justify-center items-center bg-[#EEEEEE] text-sm px-3 w-full">Sell</div>
+          <div className="h-9 flex justify-center items-center bg-black text-white text-sm px-3 w-full">Buy</div>
         </div>
       </MotionAppScreenBody>
     </AppScreen>
