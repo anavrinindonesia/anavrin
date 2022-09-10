@@ -22,7 +22,7 @@ export function Footer() {
             </a>
           </div>
           <p className="text-sm text-gray-500 text-center lg:text-left">
-            ©{new Date().getFullYear()} Anavrin Technology. All rights reserved. Various trademarks held by their respective owners.
+            ©{new Date().getFullYear()} Anavrin - PT Poplar Teknologi Indonesia. All rights reserved. Various trademarks held by their respective owners.
           </p>
         </div>
       </Container>
