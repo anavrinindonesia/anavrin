@@ -195,7 +195,7 @@ function EmpoweredScreen({ custom, animated = false }) {
           <div className="font-semibold mb-6">About TMA</div>
           <div className="space-y-4">
             {[
-              { icon: Buildings, label: 'Developer', value: 'Panah Cinta Property' },
+              { icon: Buildings, label: 'Developer', value: 'North Star Property' },
               { icon: RulerPen, label: 'Land Size', value: '1000/2000 Sq m' },
               { icon: Discover, label: 'Place', value: 'Tangerang Selatan' },
               { icon: Flag, label: 'Bought in', value: 'Jan 2022' },
