@@ -343,7 +343,7 @@ export function Hero() {
                 }
               }} viewport={{ once: true }}>
               <p className="mt-6 text-lg text-gray-600">
-                Transparent, Affordable, Lucrative
+                Transparent, Affordable, and Lucrative
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -50 }}
