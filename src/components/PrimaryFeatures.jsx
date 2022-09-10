@@ -128,7 +128,6 @@ function SmartInvestmentScreen({ custom, animated = false }) {
   return (
     <AppScreen className="w-full mobile-container">
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Become a land owner</AppScreen.Title>
         <AppScreen.Subtitle>
           <div className="mt-3 h-10 bg-[#EEEEEE] rounded-lg flex space-x-4 items-center px-4">
             <div>
