@@ -202,7 +202,7 @@ export function Pricing() {
       description: 'Low Cost Entry Fee',
       yourself: false,
       developers: false,
-      anavrin: 'Yes, In fact you can start buying as low as 50K'
+      anavrin: 'Yes, In fact you can start buying as low as Rp50K'
     },
     {
       description: 'Organic Pricing',
